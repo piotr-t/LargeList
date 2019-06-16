@@ -14,8 +14,7 @@ export class ListItemComponent implements OnInit {
 
   @Input()
   item2;
-  
-  
+
 
   ngOnInit() {
   }
