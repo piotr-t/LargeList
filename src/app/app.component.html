@@ -7,14 +7,12 @@
 </div>
 <h2>Here are some links to help you start: </h2>
 <ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+    <cdk-virtual-scroll-viewport itemSize="100" style="height: 500px"><!-- przesyła 100 danych jednocześnie --> 
+        <ng-container  *cdkVirtualFor="let item of array;templateCacheSize: 5"><!-- zapamiętuje 5 widoków -->
+  <li  >
+    <app-list-item item1={{item.index}} item2={{item.id}}></app-list-item>
   </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
+</ng-container>
+</cdk-virtual-scroll-viewport>
 </ul>
 
