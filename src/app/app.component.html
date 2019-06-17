@@ -1,17 +1,18 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+
+<div class="titleWrapper">
+  <h2>
+     {{ title }}
+  </h2>
 </div>
-<h2>>list </h2>
-<ul>
-    <cdk-virtual-scroll-viewport itemSize="100" style="height: 500px"><!-- przesyła 100 danych jednocześnie --> 
-        <ng-container  *cdkVirtualFor="let item of array;templateCacheSize: 5"><!-- zapamiętuje 5 widoków -->
-  <li  >
-    <app-list-item item1={{item.index}} item2={{item.id}}></app-list-item>
+<div class="listWrapper">
+<ul class="list">
+    <cdk-virtual-scroll-viewport itemSize="20" style="height: 600px" minBufferPx="300"> 
+        <ng-container  *cdkVirtualFor="let item of array;let odd=odd;templateCacheSize: 40 ">
+  <li [ngClass]="odd ===true?'oddItem':'evenItem'"  >
+    <app-list-item  item1={{item.index}} item2={{item.id}}></app-list-item>
   </li>
 </ng-container>
 </cdk-virtual-scroll-viewport>
 </ul>
+</div>
 

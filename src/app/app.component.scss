@@ -1,0 +1,22 @@
+.list{
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    top:20%;
+}
+cdk-virtual-scroll-viewport{
+    width: 100%;
+    margin-top: 5%;
+    border: 3px solid #737373
+}
+.oddItem{
+    background-color: #eeeff0
+}
+.evenItem{
+    background-color:rgb(214, 215, 216)
+}
+.titleWrapper{
+    text-align:center;
+    margin-top: 80px;
+    font-size: 25px
+}

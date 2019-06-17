@@ -14,13 +14,13 @@ export class AppComponent implements OnInit {
 
   }
 
-  title = 'LargeList';
+  title = 'Records list:';
 
 
 
   ngOnInit() {
-    for (let ix = 0; ix < 10000; ix++) {
-let obj = {index: ix, id: uuid() };
+    for (let ix = 1; ix < 14001; ix++) {
+const obj = {index: ix, id: uuid() };
       this.array.push(obj);
     }
 
